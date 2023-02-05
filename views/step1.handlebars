@@ -1,0 +1,12 @@
+{{#if error}}
+
+<p>{{error}}</p>
+
+{{/if}}
+
+<p>Please enter your phone number in international format starting with +234 to receive a veriification code</p>
+
+<form action="/step2" method="POST">
+<input type="tel" name="number">
+<input type="submit" value="Send code">
+</form>
