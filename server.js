@@ -1,7 +1,9 @@
 const express = require("express");
 const { engine } = require("express-handlebars");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./.env" });
 const messageBird = require("messagebird").initClient(
-  "EVCWzzfc64arpL2vgxRAr2prg"
+  process.env.MESSAGEBIRD_KEY
 );
 const bodyParser = require("body-parser");
 const app = express();
